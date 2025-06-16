@@ -19,7 +19,7 @@ export default function Lightbox({ src, alt }) {
           className="lightbox-thumb"
         />
         <div className="magnify">
-          <img src={"/src/assets/icon/zoom_icon.png"} className="magnify_icon"/>
+          <img src={"/icon/zoom_icon.png"} className="magnify_icon"/>
         </div>
       </div>
       {isOpen && (
@@ -34,10 +34,10 @@ export default function Lightbox({ src, alt }) {
           />
           <div className="buttons">
                 <a className="btn" onClick={() => setIsOpen(false)}>
-                    <img src='/src/assets/icon/close_icon.png' />
+                    <img src='/icon/close_icon.png' />
                 </a>
                 <a href={src} download={`pbp-menu-${Date.now()}.jpg`} className="btn" onClick={(e) => e.stopPropagation()}>
-                    <img src='/src/assets/icon/download_icon.png' />
+                    <img src='/icon/download_icon.png' />
                 </a>
           </div>
         </div>

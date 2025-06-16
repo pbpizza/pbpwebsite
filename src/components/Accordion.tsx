@@ -12,7 +12,7 @@ export default function Accordion({ title, text }: Props) {
     <div className="Accordion" >
         <div className="accordion_top" onClick={() => setIsOpen(!isOpen)}>
             <h4>{title}</h4>
-            <img className="icon" src={ isOpen ? "/src/assets/icon/arrow_up_icon.png" : "/src/assets/icon/arrow_down_icon.png"} />
+            <img className="icon" src={ isOpen ? "/icon/arrow_up_icon.png" : "/icon/arrow_down_icon.png"} />
         </div>
         <div className="accordion_bottom" style={{ display: isOpen ? "flex" : "none" }}>
             <p>{text}</p>
