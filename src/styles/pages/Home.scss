@@ -1,0 +1,93 @@
+.Home {
+    width: 100%;
+    height: 100%;
+    background-color: $bg_main;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    .home_inner {
+        overflow-y: auto;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 34.86%, rgba(0, 0, 0, 0.65) 100%), url(../../assets/image/bg_pizza.jpg) lightgray 50% / cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50% 5% 10%;
+        @media (orientation: landscape) {
+            justify-content: space-between;
+            padding: 5%;
+        }
+        @media screen and (max-width: 400px) and (max-height: 750px) {
+            padding-top: 40%;
+        }
+        @media screen and (max-height: 400px) and (orientation: landscape) {
+            padding-bottom: 12%;
+        }
+        // @media (max-width: 1025px) and (min-height: 500px) {
+        //     padding-top: 45%;
+        //     justify-content: space-evenly;
+        // }
+        // @media ((min-width: 600px) 
+        // and (orientation: landscape) 
+        // and (max-height: 600px)
+        // and (hover: none) 
+        // and (pointer: coarse)) {
+        //     padding-top: 5%;
+        // }
+        // @media screen and (orientation: landscape) 
+        // and (min-height: 550px) 
+        // and (hover: none) 
+        // and (pointer: coarse) {
+        //     justify-content: center;
+        //     gap: 30%;
+        // }
+        // @media (
+        //   (max-width: 1024px) or (max-height: 499px)
+        // ) and (
+        //   (max-width: 699px) or
+        //   (orientation: portrait) or
+        //   (min-height: 501px) or
+        //   (hover: hover) or
+        //   (pointer: fine)
+        // ) {
+        //   padding-top: 10%;
+        // }
+        h1 {
+            width: 75%;
+            text-align: center;
+            @media screen and (min-width: 1024px) and (orientation: landscape) {
+            width: 85%;
+        }
+        }
+        .info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            @media (max-width: 1025px) and (min-height: 500px) {
+            flex-direction: column;
+            gap: 20px;
+            }
+            .info_block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .side_by_side {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

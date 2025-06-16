@@ -1,0 +1,13 @@
+---
+import '../styles/components/NavOption.scss'
+
+const currentPath = Astro.url.pathname;
+const { pathname } = Astro.props;
+const altPath = "/"
+---
+
+<a class="nav_option_container" href={ pathname === "home" ? altPath : `/${pathname}`}>
+    <div class={"nav_option " + ( currentPath === "/" && pathname === "home" || currentPath === `/${pathname}` ? "nav_option_active" : "nav_option_inactive")}>
+        <h3 class={"nav_text " + ( currentPath === "/" && pathname === "home" || currentPath === `/${pathname}` ? "nav_text_active" : "nav_text_inactive")}>{pathname.toLocaleUpperCase()}</h3>
+    </div>
+</a>

@@ -1,0 +1,223 @@
+
+.isOpen {
+    align-items: flex-start;
+}
+.isClosed {
+    align-items: center;
+}
+.MobileNavigation {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    right: 2vw;
+    width: 96vw;
+    min-width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 7;
+    @media (orientation: landscape) {
+        display: none;
+    }
+    .logo {
+        width: 180px;
+        height: 180px;
+        position: fixed;
+        z-index: 8;
+        margin-right: -80px;
+        top: 20px;
+        left: 0;
+        @media (max-width: 361px) {
+            width: 160px;
+            height: 160px;
+            margin-right: -40px;
+        }
+    }
+    .containerIsOpen {
+        height: 550px;
+        @media (max-width: 389px) and (orientation: portrait) {
+            height: 500px;
+        }
+        @media (min-width: 850px) and (orientation: portrait) {
+            height: 800px;
+        }
+    }
+    .containerIsClosed {
+        height: 50px;
+    }
+    .container {
+        width: 87vw;
+        min-width: 330px;
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg_secondary;
+        border-radius: 10px;
+        padding: 0 5px;
+        position: fixed;
+        right: 25px;
+        top: 80px;
+        @media (max-width: 400px) and (orientation: portrait) {
+            width: 80vw;
+            min-width: 300px;
+        }
+        @media (max-width: 361px) {
+            min-height: 60px;
+            min-width: 220px;
+            width: 84vw;
+        }
+        @media (min-width: 900px) and (orientation: portrait) {
+            margin-right: 3.5%;
+        }
+        .inner_border_is_open {
+            height: 535px;
+            flex-direction: column;
+            @media (max-width: 389px) and (orientation: portrait) {
+                height: 485px;
+            }
+            @media (min-width: 850px) and (orientation: portrait) {
+            height: 785px;
+            }
+        }
+        .inner_border_is_closed {
+            height: 55px;
+            flex-direction: row;
+        }
+        .inner_border {
+            border: 1px solid $accent;
+            border-radius: 8px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 389px) and (orientation: portrait) {
+                padding: 0;
+            }
+            .selection_area {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .selected_option {
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .menu_button {
+                    width: auto;
+                    height: 80%;
+                    aspect-ratio: 1 / 1;
+                    position: relative;
+                    right: 5%;
+                    background-color: $accent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    // @media (max-width: 361px) {
+                    //     min-width: 30px;
+                    // }  
+                    .menu_icon {
+                        width: 30px;
+                        height: 30px;
+                        aspect-ratio: 1 / 1;
+                        @media (max-width: 361px) {
+                            min-width: 20px;
+                        } 
+                    }
+                }
+            }
+            .open_container {
+                padding-top: 45px;
+                width: 100%;
+                height: 480px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5vh;
+                animation: slideDown 0.3s ease-out;
+                transform-origin: top;
+    
+                .divider_1 {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    @media (max-width: 361px) {
+                        width: 75%;
+                    } 
+                    .pizza_icon {
+                        height: 40px;
+                        width: 40px;
+                    }
+                    .divider_line_1 {
+                        width: 40%;
+                        height: 4px;
+                    }
+                }
+                .options_container {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2vh;
+                    a {
+                        text-decoration: none;
+                        width: 100%;
+                    }
+                    .nav_option {
+                        width: 100%;
+                        border-bottom: 1px solid $accent;
+                    }
+                }
+                .phone {
+                    width: 50%;
+                    height: 5vh;
+                    border: 1px solid $accent;
+                    border-radius: 5px;
+                    padding: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h5 {
+                        @media (min-width: 850px) and (orientation: portrait) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .divider_2 {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    .divider_line_2 {
+                        width: 15%;
+                        height: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@keyframes slideDown {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px) scaleY(0.95);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0) scaleY(1);
+                    }
+                }

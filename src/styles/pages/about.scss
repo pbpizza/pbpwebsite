@@ -1,0 +1,188 @@
+.AboutContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+    overflow: hidden;
+    .about_content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        @media ( orientation: landscape ) {
+            width: 70%;
+        }
+        @media ( orientation: portrait ) {
+            width: 100%;
+            padding-top: 25%;
+        }
+    }
+    .state_buttons {
+        width: 40%;
+        height: 100%;
+        flex-direction: column;
+        gap: 10%;
+        justify-content: center;
+        align-items: center;
+        @media (orientation: portrait) {
+            display: none;
+        }
+        @media (orientation: landscape) {
+            display: flex;
+        }
+        @media ((min-width: 600px) 
+        and (orientation: landscape) 
+        and (max-height: 600px)
+        and (hover: none) 
+        and (pointer: coarse)) {
+            width: 25%;
+            padding-left: 2%;
+        }
+        button {
+            width: 75%;
+            height: 12%;
+            min-height: 60px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            @media ((min-width: 600px) 
+            and (orientation: landscape) 
+            and (max-height: 600px)
+            and (hover: none) 
+            and (pointer: coarse)) {
+                width: 95%;
+            }
+        }
+        .button_active {
+            background-color: $accent;
+            color: $bg_main;
+        }
+        .button_inactive {
+            border: 1px solid $accent;
+            color: $accent;
+            background-color: transparent;
+        }
+    }
+        .food_imgs {
+            height: 100%;
+            width: auto;
+            aspect-ratio: 1 / 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+            .food_box {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+        }
+//     .food_imgs {
+//     /* Core layout variables - change these to scale */
+//     --grid-columns: 2;
+//     --grid-rows: 2;
+//     --container-width: 40%;
+//     --container-aspect-ratio: 1 / 1;
+//     --grid-gap: 5px;
+//     --image-aspect-ratio: 1 / 1;
+//     --image-span: 1;
+    
+//     /* Applied styles */
+//     width: var(--container-width);
+//     aspect-ratio: var(--container-aspect-ratio);
+//     display: grid;
+//     grid-template-columns: repeat(var(--grid-columns), 1fr);
+//     grid-template-rows: repeat(var(--grid-rows), 1fr);
+//     gap: var(--grid-gap);
+// }
+
+// .food_box {
+//     width: 100%;
+//     height: 100%;
+//     aspect-ratio: var(--image-aspect-ratio);
+//     border-radius: 5px;
+//     object-fit: cover;
+//     grid-column: span var(--image-span);
+// }
+
+// /* Media queries with cleaner overrides */
+// @media ((min-width: 600px) 
+//     and (orientation: landscape) 
+//     and (max-height: 600px)
+//     and (hover: none) 
+//     and (pointer: coarse)) {
+//         .food_imgs {
+//             --grid-columns: 4;
+//             --grid-rows: 1;
+//             --container-width: 80%;
+//             --container-aspect-ratio: 4 / 1;
+//             --image-aspect-ratio: 2 / 1;
+//             --image-span: 2;
+//             height: 50vh;
+//             aspect-ratio: unset; /* Override aspect-ratio when using fixed height */
+//         }
+// }
+
+// @media screen and (orientation: portrait) 
+// and (min-width: 768px) 
+// and (hover: none) 
+// and (pointer: coarse) {
+//     .food_imgs {
+//         --grid-columns: 2;
+//         --grid-rows: 2;
+//         --grid-gap: 2%;
+//         --image-aspect-ratio: 1 / 1;
+//         --image-span: 1;
+//         --container-aspect-ratio: 1 / 1;
+//         --container-width: 50%;
+//         height: 35vh;
+//         width: 35vh;
+//         aspect-ratio: 1 / 1;
+//         .food_box {
+//             height: 100%;
+//             width: 100%;
+//         }
+//     }
+// }
+
+// @media screen and (orientation: landscape) 
+// and (min-height: 550px) 
+// and (hover: none) 
+// and (pointer: coarse) {
+//     .food_imgs {
+//         --grid-columns: 2;
+//         --grid-rows: 2;
+//         height: 40vh;
+//         width: auto;
+//         aspect-ratio: 1 / 1;
+//         .food_box {
+//             aspect-ratio: 1 / 1;
+//             grid-column: span 1;
+//             grid-row: span 1;
+//             width: 100%;
+//         }
+//     }
+// }
+
+// @media (max-width: 1025px) 
+// and (min-height: 500px) 
+// and (hover: none) 
+// and (pointer: coarse) {
+//     .food_imgs {
+//         --container-width: 80%;
+//     }
+// }
+
+// @media ((min-width: 600px) 
+//     and (orientation: landscape) 
+//     and (max-height: 600px)
+//     and (hover: none) 
+//     and (pointer: coarse)) {
+//         .food_imgs {
+//             --container-width: 75%;
+//         }
+// }
+}

@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    @media (orientation: portrait) {
+      flex-direction: column;
+    }
+    main {
+        height: 100%;
+        min-height: 400px;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg_main;
+        // overflow: hidden;
+        @media (orientation: landscape) {
+          width: 80%;
+          min-width: 420px;
+        }
+        @media (orientation: portrait) {
+          width: 100%;
+          min-width: 350px;
+        }
+        @media (max-width: 1025px) and (min-height: 500px) {
+          flex-direction: column;
+        }
+        @media ((min-width: 600px) 
+        and (orientation: landscape) 
+        and (max-height: 600px)
+        and (hover: none) 
+        and (pointer: coarse)) {
+          width: 75%;
+        }
+        @media (min-height: 600px) and (max-width: 500px) {
+          width: 100%;
+          height: 100%;
+          max-height: 100vh;
+        }
+    }
+}
+
+* {
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3B3B45;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $bg_secondary;
+}
+}

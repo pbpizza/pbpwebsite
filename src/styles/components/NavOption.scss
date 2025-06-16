@@ -1,0 +1,24 @@
+.nav_option_container {
+    text-decoration: none;
+    width: 100%;
+    color: inherit;
+    .nav_option {
+        border-bottom: 1px solid;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        text-decoration: none;
+            .nav_text_active {
+                color: $accent;
+            }
+            .nav_text_inactive {
+                color: $inactive;
+            }
+        }
+    .nav_option_active {
+        border-color: $inactive;
+    }
+    .nav_option_inactive {
+        border-color: $accent;
+    }
+}

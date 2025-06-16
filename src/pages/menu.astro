@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Lightbox from "../components/Lightbox"
+import '../styles/pages/menu.scss'
+---
+
+<Layout>
+<div class="menu_page">
+    <div class="menu_container">
+        <Lightbox src="/src/assets/image/pbp_menu.jpg" alt="menu" client:idle />
+    </div>
+    <div class="right_side">
+        <div class="words">
+            <h2 class="sentence">
+                BUILT ON DOUGH.
+            </h2>
+            <h2 class="sentence">
+                POWERED BY CHEESE.
+            </h2>
+            <h2 class="sentence">
+                FORGED IN FLAVOR.
+            </h2>
+        </div>
+        <div class="button_container">
+            <h3>HUNGRY YET?</h3>
+            <button class="button">ORDER FOR PICKUP</button>
+        </div>
+    </div>
+</div>
+</Layout>

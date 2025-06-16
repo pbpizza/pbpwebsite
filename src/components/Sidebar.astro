@@ -1,0 +1,21 @@
+---
+import Divider1 from "./Divider_1.astro";
+import Divider2 from "./Divider_2.astro";
+import Navigation from "./Navigation.astro";
+import "../styles/components/Sidebar.scss"
+---
+
+<div class="Sidebar">
+    <div class="sidebar_inner">
+        <img class="navigation_logo" src="/src/assets/image/pbp_logo.png" alt="Pretty Boy Pizza Logo" class="sidebar_logo" />
+        <div class="navigation_area">
+            <Divider1 />
+            <Navigation />
+            <div class="phone">
+                <h5>PHONE:</h5>
+                <h5>(503) 555-5555</h5>
+            </div>
+            <Divider2 />
+        </div>
+    </div>
+</div>

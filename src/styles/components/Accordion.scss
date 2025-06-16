@@ -1,0 +1,51 @@
+.Accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid $accent;
+    cursor: pointer;
+    .accordion_top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10%;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        padding-right: 12%;
+        height: 8vh;
+        min-height: 60px;
+        @media (max-width: 1025px) and (min-height: 500px) {
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        @media ((min-width: 600px) 
+        and (orientation: landscape) 
+        and (max-height: 600px)
+        and (hover: none) 
+        and (pointer: coarse)) {
+            justify-content: flex-start;
+        }
+        @media screen and (orientation: portrait) 
+            and (min-width: 768px) 
+            and (hover: none) 
+            and (pointer: coarse) {
+                padding-left: 2%;
+        }
+        .icon {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            right: 2%;
+        }
+    }
+    .accordion_bottom {
+        height: 70px;
+        background-color: #3B3B45;
+        border-left: 10px solid $accent;
+        padding: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

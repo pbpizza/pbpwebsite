@@ -1,0 +1,29 @@
+---
+import Sidebar from "../components/Sidebar.astro";
+import MobileNavigation from "../components/MobileNavigation";
+import "../styles/layout.scss";
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pretty Boy Pizza</title>
+	</head>
+	<body>
+		<Sidebar />
+		<MobileNavigation pathname={currentPath} client:idle/>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	
+</style>
