@@ -4,10 +4,6 @@ import '../styles/components/NavOption.scss'
 const currentPath = Astro.url.pathname;
 const { pathname } = Astro.props;
 const altPath = "/"
-
-console.log('currentPath:', currentPath);
-console.log('pathname:', pathname);
-console.log('Expected path:', pathname === "home" ? "/" : `/${pathname}`);
 ---
 
 <a class="nav_option_container" href={ pathname === "home" ? altPath : `/${pathname}/`}>

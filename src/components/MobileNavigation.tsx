@@ -20,7 +20,7 @@ export default function MobileNavigation({ pathname }: Props) {
         <div className={'container' + ( isOpen ? ' containerIsOpen' : ' containerIsClosed') } style={ pathname !== '/' ? { top: "20px", width: "87%"} : { top: "80px"} }>
                 <div className={'inner_border' + ( isOpen ? ' inner_border_is_open' : ' inner_border_is_closed') }>
                     <div className="selection_area">
-                        <h3 className="selected_option" style={ pathname === "/" ? {marginLeft: "50px"} : {}}>{ pathname === '/' ? "HOME" : pathname.slice(1).toLocaleUpperCase()}</h3>
+                        <h3 className="selected_option" style={ pathname === "/" ? {marginLeft: "50px"} : {}}>{ pathname === '/' ? "HOME" : pathname.slice(1).slice(0, -1).toLocaleUpperCase()}</h3>
                         <div className="menu_button" onClick={() => setIsOpen(!isOpen)}>
                             <img className="menu_icon" src={ isOpen ? "/icon/close_icon_dark.png" : "/icon/menu_icon.png" } />
                         </div>
