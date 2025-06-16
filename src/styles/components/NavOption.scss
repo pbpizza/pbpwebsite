@@ -16,9 +16,9 @@
             }
         }
     .nav_option_active {
-        border-color: $inactive;
+        border-color: $accent;
     }
     .nav_option_inactive {
-        border-color: $accent;
+        border-color: $inactive;
     }
 }
