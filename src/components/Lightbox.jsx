@@ -18,7 +18,7 @@ export default function Lightbox({ src, alt }) {
     <>
     <div className="image" onClick={() => setIsOpen(true)}>
         <img
-          src={src}
+          src={src.src}
           alt={alt}
           className="lightbox-thumb"
         />
