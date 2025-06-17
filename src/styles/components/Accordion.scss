@@ -15,6 +15,10 @@
         padding-right: 12%;
         height: 8dvh;
         min-height: 60px;
+        h4 {
+            text-align: left;
+            width: 100%;
+        }
         @media (max-width: 1025px) and (min-height: 500px) {
             gap: 10px;
             justify-content: flex-start;

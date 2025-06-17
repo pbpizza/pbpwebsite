@@ -8,6 +8,11 @@
         width: 100%;
         text-align: left;
         text-decoration: none;
+        .nav_text {
+            @media screen and (orientation: landscape) and (max-height: 450px) {
+                font-size: 18px;
+            }
+        }
             .nav_text_active {
                 color: $accent;
             }

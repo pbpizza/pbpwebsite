@@ -265,4 +265,13 @@ button {
     and (min-width: 1300px) {
         font-size: 56px;
     }
+    @media (max-width: 950px) and (max-height: 450px) and (orientation: landscape) {
+        font-size: 26px;
+    }
+    @media (max-height: 950px) and (max-width: 450px) and (orientation: portrait) {
+        font-size: 22px;
+    }
+    @media screen and (orientation: landscape) and (min-height: 451px) {
+        font-size: 42px;
+    }
 }

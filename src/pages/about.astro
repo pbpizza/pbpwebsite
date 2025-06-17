@@ -1,8 +1,19 @@
 ---
 import AboutContainer from '../components/AboutContainer'
 import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+
+import image_1 from "../assets/image/food_1.jpg"
+import image_2 from "../assets/image/food_2.jpg"
+import image_3 from "../assets/image/food_3.jpg"
+import image_4 from "../assets/image/food_4.jpg"
 ---
 
 <Layout>
-    <AboutContainer client:idle/>
+    <AboutContainer client:idle>
+        <Image src={image_1} alt="A picture of our delicious cheese pizza." class="food_box"/>
+        <Image src={image_2} alt="A picture of our Sinful Trinity pizza." class="food_box"/>
+        <Image src={image_3} alt="A picture of our signature Pepperoni pizza." class="food_box"/>
+        <Image src={image_4} alt="A picture of our fabulous cheese bread." class="food_box"/>
+        </AboutContainer>
 </Layout>

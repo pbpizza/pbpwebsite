@@ -72,4 +72,20 @@
             height: 100%;
         }
     }
+    .food_imgs {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+        .food_box {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+}
 }

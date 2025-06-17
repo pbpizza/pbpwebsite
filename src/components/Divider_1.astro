@@ -1,9 +1,12 @@
 ---
+import { Image } from "astro:assets"
 import "../styles/components/Divider_1.scss"
+import divider_line from "../assets/image/divider_line.png"
+import pizza_icon from "../assets/icon/pizza_icon.png"
 ---
 
 <div class="Divider_1">
-    <img class="divider_line" src="/image/divider_line.png" />
-    <img src="/icon/pizza_icon.png" alt="Pizza Icon" class="pizza_icon" />
-    <img class="divider_line" src="/image/divider_line.png" />
+    <Image src={divider_line} class="divider_line" alt="" role="presentation"/>
+    <Image src={pizza_icon} alt="" class="pizza_icon" role="presentation"/>
+    <Image src={divider_line} class="divider_line" alt="" role="presentation"/>
 </div>

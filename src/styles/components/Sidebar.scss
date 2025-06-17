@@ -19,6 +19,9 @@
         width: 25%;
         max-width: 25%;
     }
+    @media screen and (orientation: landscape) and (max-height: 450px) {
+        padding-bottom: 5%;
+    }
     .sidebar_inner {
         border: 1px solid $accent;
         border-radius: 10px;
@@ -34,11 +37,14 @@
         and (pointer: coarse) {
             padding-bottom: 10%;
         }
-        .navigation_logo {
+        .sidebar_logo {
             height: 25%;
             width: auto;
             aspect-ratio: 1 / 1;
             object-fit: contain;
+            @media screen and (orientation: landscape) and (max-height: 450px) {
+                height: 20%;
+            }
         }
         .navigation_area {
             display: flex;
@@ -73,6 +79,9 @@
                     and (min-width: 1000px) {
                         font-size: 18px;
                         text-align: center;
+                    }
+                    @media screen and (orientation: landscape) and (max-height: 450px) {
+                        font-size: 11px;
                     }
                 }
             }

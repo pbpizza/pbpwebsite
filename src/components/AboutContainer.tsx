@@ -5,19 +5,15 @@ import FAQs from './FAQs'
 import '../styles/pages/about.scss'
 import AboutTitle from './AboutTitle'
 
-type Props = {}
+import logo from "../assets/image/pbp_logo.png"
 
-function AboutContainer({}: Props) {
+type Props = {
+    children?: React.ReactNode;
+}
+
+function AboutContainer({ children }: Props) {
     const [ state, setState ] = useState<number>(0)
 
-    const food_imgs = ( 
-                        <div className="food_imgs">
-                            <img className='food_box' src="/image/food_1.jpg" />
-                            <img className='food_box' src="/image/food_2.jpg" />
-                            <img className='food_box' src="/image/food_3.jpg" />
-                            <img className='food_box' src="/image/food_4.jpg" />
-                        </div> 
-    )
     const about_us_text = <p>Prettyboy Pizza was born out of a love for silliness, lightheartedness, and having fun in the genre of pizza. My “career” began with a harmless lie I told my wife when we first met—bragging that I made homemade pizzas, despite never having touched dough in my life. The result? Not the “Prettyboys” you know today, but rather one “pretty boy” who became the butt of an ongoing inside joke for years to come. Like a supervillain on a redemption arc, I’ve spent the last 8+ years working in pizza shops up and down the West Coast, honing my craft to silence the haters—namely, my incredibly supportive and lovingly relentless wife. What emerged from this journey is our pizza: a style that isn’t quite grandma, not quite Detroit, not quite focaccia—but a party pizza all its own. It’s made to be devoured fresh out of the oven or straight from the fridge at 2AM—whatever the vibe calls for. While we take our craft seriously, we know pizza is meant to be fun. It’s food for friends, road trips, hangouts, and celebrations. So come grab a tray and see what we’re all about.</p>
     const our_food_text = <p>Like a reverse mullet, our pizza is party in the front, business in the back. That greasy, crispy, cheesy goodness up top? It’s backed by a meticulous 48-hour poolish dough, topped with diced Italian cheese and a line-up of house-made sauces. All of our sauces are vegan and free from most common allergens—because we believe everyone should be able to join the party. Every tray is made with love, care, and obsessive attention to detail—exactly what your perfect party pizza deserves.</p>
     const questions = [ ["Do you have gluten free options?", "We do! We make our own gluten-free dough in-house."], 
@@ -43,9 +39,11 @@ function AboutContainer({}: Props) {
             state === 1 || state === 2 ?
                 <AboutBox   title={<AboutTitle state={state} setState={setState}/>}
                             child_1={   state === 1 ? 
-                                            <img src="/image/pbp_logo.png" className="about_logo"/> 
+                                            <img src={ logo.src } className="about_logo" alt="Prettyboy Pizza" aria-hidden="true"/> 
                                         : state === 2 ?
-                                            food_imgs
+                                            <div className='food_imgs'>
+                                                {children}
+                                            </div>
                                         :
                                             null
                             }

@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets"
 import "../styles/components/Divider_2.scss"
+import divider_line from "../assets/image/divider_line.png"
 ---
 
 <div class="Divider_2">
-    <img class="divider_line" src="/image/divider_line.png" />
-    <h5 class="divider_text">PRETTYBOY</h5>
-    <img class="divider_line" src="/image/divider_line.png" />
+    <Image class="divider_line" src={divider_line} alt="" role="presentation" />
+    <h5 class="divider_text" aria-hidden="true" >PRETTYBOY</h5>
+    <Image class="divider_line" src={divider_line} alt="" role="presentation" />
 </div>

@@ -2,12 +2,15 @@
 import Layout from "../layouts/Layout.astro"
 import Lightbox from "../components/Lightbox"
 import '../styles/pages/menu.scss'
+import menu from "../assets/image/pbp_menu.jpg"
 ---
 
 <Layout>
 <div class="menu_page">
-    <div class="menu_container">
-        <Lightbox src="/image/pbp_menu.jpg" alt="menu" client:idle />
+    <div class="left_side" >
+        <div class="menu_container">
+            <Lightbox src={menu.src} alt="Open menu." client:idle />
+        </div>
     </div>
     <div class="right_side">
         <div class="words">
