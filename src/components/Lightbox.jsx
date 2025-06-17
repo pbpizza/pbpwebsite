@@ -29,7 +29,7 @@ export default function Lightbox({ src, alt }) {
       {isOpen && (
         <div className="lightbox-backdrop" onClick={() => setIsOpen(false)}>
           <img
-            src={src}
+            src={src.src}
             alt={alt}
             className="lightbox-full"
             style={{ transform: `scale(${scale})` }}
