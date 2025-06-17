@@ -272,6 +272,9 @@ button {
         font-size: 22px;
     }
     @media screen and (orientation: landscape) and (min-height: 451px) {
-        font-size: 42px;
+        font-size: 40px;
+    }
+    @media screen and (orientation: landscape) and (min-height: 1000px) {
+        font-size: 52px;
     }
 }
