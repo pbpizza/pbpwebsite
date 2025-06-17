@@ -2,14 +2,18 @@
 import Layout from "../layouts/Layout.astro"
 import Lightbox from "../components/Lightbox"
 import '../styles/pages/menu.scss'
+
 import menu from "../assets/image/pbp_menu.jpg"
+import close_icon from "../assets/icon/close_icon.png"
+import download_icon from "../assets/icon/download_icon.png"
+import zoom_icon from "../assets/icon/zoom_icon.png"
 ---
 
 <Layout>
 <div class="menu_page">
     <div class="left_side" >
         <div class="menu_container">
-            <Lightbox src={menu} alt="Open menu." client:load />
+            <Lightbox src={menu} zoom={zoom_icon} close={close_icon} download={download_icon} alt="Open menu." client:load />
         </div>
     </div>
     <div class="right_side">

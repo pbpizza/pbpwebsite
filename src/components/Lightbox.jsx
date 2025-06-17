@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/components/Lightbox.scss"; // Add zoom styles here
 
-import close_icon from "../assets/icon/close_icon.png"
-import download_icon from "../assets/icon/download_icon.png"
-import zoom_icon from "../assets/icon/zoom_icon.png"
-
-export default function Lightbox({ src, alt }) {
+export default function Lightbox({ src, alt, zoom, close, download }) {
     const [isOpen, setIsOpen] = useState(false);
     const [scale, setScale] = useState(1);
 
@@ -23,7 +19,7 @@ export default function Lightbox({ src, alt }) {
           className="lightbox-thumb"
         />
         <div className="magnify">
-          <img src={zoom_icon} className="magnify_icon" alt="Zoom in on menu." role="button" />
+          <img src={zoom.src} className="magnify_icon" alt="Zoom in on menu." role="button" />
         </div>
       </div>
       {isOpen && (
@@ -38,10 +34,10 @@ export default function Lightbox({ src, alt }) {
           />
           <div className="buttons">
                 <a className="btn" onClick={() => setIsOpen(false)}>
-                    <img src={close_icon} alt="Close window." role='button' />
+                    <img src={close.src} alt="Close window." role='button' />
                 </a>
                 <a href={src} download={`pbp-menu-${Date.now()}.jpg`} className="btn" onClick={(e) => e.stopPropagation()} >
-                    <img src={download_icon} alt="Download menu." role='button'/>
+                    <img src={download.src} alt="Download menu." role='button'/>
                 </a>
           </div>
         </div>
