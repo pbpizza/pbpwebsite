@@ -43,7 +43,7 @@ export default function MobileNavigation({ pathname }: Props) {
                                     {
                                         paths.filter((path) => (pathname === "/") ? (path !== "home") : (path !== pathname) ).map((path, index) => {
                                             return (
-                                                <a key={index} href={ path === "home" ? "/" : `/${path}`}>
+                                                <a key={index} href={ path === "home" ? "/" : path === 'order' ? "https://order.toasttab.com/online/little-beast-brewing-beer-garden-3412-southeast-division-street" : `/${path}`}>
                                                     <div className="nav_option">
                                                         <h3 className="option_text">{path.toLocaleUpperCase()}</h3>
                                                     </div>
