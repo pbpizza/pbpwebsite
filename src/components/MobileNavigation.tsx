@@ -52,10 +52,6 @@ export default function MobileNavigation({ pathname }: Props) {
                                         })
                                     }
                                     </div>
-                                    <div className="phone" onClick={() => window.location.href = 'tel:+15035555555'} >
-                                        <h5>PHONE:</h5>
-                                        <h5>(503) 555-5555</h5>
-                                    </div>
                                     <div className="divider_2">
                                         <img className="divider_line_2" src={divider_line.src} alt="" role="presentation" />
                                         <h5 aria-hidden="true">PRETTYBOY</h5>
