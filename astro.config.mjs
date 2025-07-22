@@ -5,6 +5,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://prettyboypizza.com',
+  base: "/",
   integrations: [react()],
   vite: {
     resolve: {
